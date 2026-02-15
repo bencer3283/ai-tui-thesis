@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper, total={16cm, 22cm}]{geometry}
+\usepackage[stable]{footmisc}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{vcell}
+\setlength{\columnsep}{1cm}
+\PassOptionsToPackage{hyphens}{url}\usepackage[pdfborder={0 0 0.5 [2 2]}]{hyperref}
+% \usepackage{fancyhdr}
+% \setlength{\headheight}{15pt}
+%\pagestyle{fancy}
+% \fancyhead[L]{Hidden Cost of Technology}
+% \fancyhead[R]{Ben Cheng}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{multirow}
+\graphicspath{ {./images/} }
+\usepackage[backend=biber, style=authoryear, sorting=none]{biblatex}
+\addbibresource{ref.bib}
+\usepackage{mathspec}   %加這個就可以設定字體
+%\usepackage{xeCJK}       %讓中英文字體分開設置
+%\setCJKmainfont{Noto Serif CJK TC} %設定中文為系統上的字型
+%\newCJKfontfamily[chineseSans]\CJKsans{Noto Sans CJK TC}
+\setmainfont{IBM Plex Serif}
+\setsansfont{Space Grotesk}
+\setmonofont{IBM Plex Mono}
+%\renewcommand{\familydefault}{\sfdefault}
+\XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt     %這兩行一定要加，中文才能自動換行
+\renewcommand{\baselinestretch}{1.25}
+% \renewcommand{\figurename}{圖}
+% \renewcommand{\tablename}{表}
+% \renewcommand{\abstractname}{摘要}
+% \renewcommand{\contentsname}{目錄}
+% \renewcommand{\listtablename}{表格目錄}
+%\renewcommand*{\bibfont}{\footnotesize}
+\titleformat*{\section}{\Large \bfseries \sffamily}
+\titleformat*{\subsection}{\large \bfseries \sffamily}
+\titleformat*{\subsubsection}{\bfseries \sffamily}
+\setcounter{tocdepth}{2}
+\setcounter{biburlucpenalty}{9900}
+\setcounter{biburllcpenalty}{9900}
+\setcounter{biburlnumpenalty}{9900}
+
+\title{\sffamily{\small MID Working Thesis} \\ \bfseries Pitfalls and alternatives of foundation models}
+\author{Ben Po-Sheng Cheng\thanks{Rhode Island School of Design. Contact: pcheng01@risd.edu}}
+\date{\today}
+\begin{document}
+\pagenumbering{roman}
+\maketitle
+\begin{abstract}
+    Ever since OpenAI unveiled ChatGPT to the public, the idea of Artificial General Intelligence (AGI) has stormed the tech industry with its promise to be ``the most impactful technology in human history''. (\cite{sama}) This is part of a larger paradigm shift of AI development towards general capability Foundation Models that consumes humongous resources. The conversational chatbot interface of ChatGPT has become a norm of how people expect to interact with AI. However, the paradigm of foundation model is dangerous. Enormous amount of energy, labor and capital have been poured into the development of foundation model despite its several overlooked issues, like reinforced bias and inequalities, unhealthy distortion of the science community and the environmental cost of datacenters. 
+
+    % The goal of this work is to challenge this AI paradigm by resurfacing its messy logistics and revealing other potential alternatives through devices that embed this information into its tangible user interface. I wish to spark discussions on whether we should be so devoted to this path and provide a pointer towards other possible trajectories for AI's future that are more sustainable, ethical, and humane. 
+    The goal of this work is to challenge this AI paradigm by painting an alternative picture of what AI can be when it is on the opposite side of large, cloud-based, omni-capable and corporate-owned. The body of work is a designed electronics device and its tangible user interface. With them, I wish to provoke the conversation around new implications in terms of societal human-AI relationship.
+\end{abstract}
+\newpage
+
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section{Introduction}
+In recent years, AI has definitely become the technology in spotlight. AI startups are raising significant money every year, CEOs feel compelled to implement AI in their companies, while artists and news outlets are filing lawsuits against data infringement and the fear of being replaced by AI among workers are once again soaring. People seem to have mixed and strong feelings (perhaps too strong) about AI, but a proper conversation about what kind of AI we actually want is missing. The narrative around AI is usually extremely polarized -- either a utopian picture or dystopian one. On the utopian side, prominent voice in the industry describe AI as the ``the most impactful technology in human history'', (\cite{sama}) with the potential to solve cancer and climate change. On the other hand, an intelligence machine with super-huamn capability has always been the one of the greatest fear of humanity as seen in sci-fi movies and novels.
+
+Neither of the narratives helps moving the technology forward to where we want it to be, because they concude flooring either the throttle or the break pedal. In reality, what AI actually can become deserves a much more granular answer, and this work seeks to paint a version of that. To begin with, I want to look at the current dominant paradigm of AI development and in particular, as an attempt to outline the potential improvement and also to establish the fact that AI has problems worth fixing, focusing on the issues and downfalls created by the paradigm. Subsequently, other alternative paradigm for AI development are explored, finally leading to my proposal as a designed tangible user interface.
+
+The ultimate goal of this project is, however, to provoke conversations on the different societal implications of AI other than the two extreme utopian/dyspotian narratives. Through the designed device/interface, I wish people can start to see different ways AI can be built, used, and impact our life.
+
+\subsection{Issues of the current paradigm}
+\subsection{Alternatives}
+\subsection{Tangible interface}
+A tangible interface is a physical device that allows spectators to imagine how it can be used and also what context it can be situated in. It opens a broader conversation on not just what AI can be but also wider speculations of the societal impact of AI. If the alternative AI paradigm in my proposition is small, local, private and personal, naturally the machine learning model has to live in a personal electronics device, and people inevitably interact with the model in some ways through this device.
+
+Ever since the popularity of ChatGPT skyrocketed, the designed interface for Large Language Models has been centered around various forms of chatbot. This make sense, as these models are built to understand and predit natural langauge. However, chatbot alone is a very inefficient way to interact with these models. For example, in task like coding and image generation, it is very rare that the models can produce the ideal result on the first try, usually it takes several iterations and additional prompts to modify the initial result to perfection. Under the hood, these modifying prompts are appended to the initial prompt, making the input for all subsequent requests longer and longer. Additionally, chatbot as a human computer interface also provides no clue to how the technology actually works, and thus deprive the user from learning best practices and trouble-shooting techniques. This is not the say chatbot is the wrong interface but to argue that more control and configurability should be implemented, either in hardware form or software form.
+
+\subsection*{}
+Through my designed tangible interface, I wish to illustrate a different type of AI models that is small, local, private and personal, and to explore the new possibilities of how AI can/should be used and the alternative scoietal implication in terms of human-AI relationship.
+
+\section{Observations}
+\subsection{AI is not good enough}
+By saying that AI would benefit the world because it can solve cancer, climate change and poverty, popular AI advocative sentiment usually implies that if we solve AI, then we essentially solve everything. However, the actual implication of a solved world is far beyond general prosperity and panacae. Philosopher Nick Bostrom describes the condition of a solved world as \textit{Technology Maturity}, meaning that with AI we would have all the technologies we can possibly have and use them to solve whatever problem that remains. (\cite{bostromdeeputopia}) When we look into what exactly these technology are, you will see that we are still so far away from technology maturity.
+
+{\itshape TODO: Examples. Brain-computer interface, solving AI is almost contingent on solving the human brain, which we are still far. }
+\subsubsection{Language alone is not enough}
+\subsection{Is AI ever going to be good enough?}
+{\itshape TODO: Can we have human-level intelligence machine without inducing moral-status? Sentience machine (\cite{bostromdeeputopia})}
+\subsubsection{Do we really want AI to be that good?}
+{\itshape TODO: Purpose? Return of Malthusian economy. Extreme inequality -- all earning goes to capital. Reference Sec. \ref{econ}}
+\subsection{AI is machine, not human}
+The discussion of the long-term utopian (or dystopian) vision and speculation of AI is beyond the scope of this design work. We are designing for the world with current technologies and socioeconomical conditions. However, extrapolating the extreme future informs us a lot about what the currrent vesion of AI we have actually is and how it sits in the imaginable roadmap of the technology. Only once we have those understandings can we design for the AI we have instead the AI we envision.
+
+Following previous discussions, we know that the current version of AI we have is still far away from what's promised. That is, the technology itself is still not good enough. However, in the discipline of design, we are designing the derivative product or human interface of AI \textit{as if} the technology was that good. The perimeter of the very limited capability of models is intentionally invisible. The intrinsic downfalls and externalities are hidden. In pursuing ease-of-use and ``seamless user experience'', user-configurablity is completely abandoned. It seems that designers want users to believe that the models can figure out what exactly what's needed where in fact more means of user input could potentially improve the performance dramatically. The prevalent chatbot interface gives up on informing the user how models work, essentially depriving user's oppurtunity to make models work better for them.
+
+Chatbot is a human-human interface that lives on computing devices, not a human-computer interface. One of the implication of technology maturity is that whatever intelligence machine we come up with, we can interact with it in a manner extremely similar to human-human interaction. AI, as it is now, is a sort of intelligence machine that is still far from technology maturity. However, that interface that we came up with is the one that is supposed to make sense only once technology maturity is reached. In designing a interface like chatbot, the desginer forgot the fact that AI is still fundamentally a machine. Machines need to be operated in a certain way to yield maximum performance and efficiency. Operating a machine requires that the user has some technical knowledge. A well-planned learning curve is what makes a human interface usable. Typing on a keyboard is a learning curve. Scrolling, pinch-to-zoom, long-press on a touch screen all demand leanring. For a technology like AI that is still novel to the public, opting for a human-like interface that has close to no learning curve seems more like evading the hard work rather than being considerate.
+
+In every other technology humanity has ever seen before, its human interface is always one that bridges the needs of users and the limitations of the technology. The purpose of human interface is to make the technology works for the human, hence the interface has to work for both the technology and the human. Chatbot, however, is one that only works for human but takes no consideration for the intrinsic properties and operational parameters of the models.
+
+A good human interface informs the user the capabilities (and limitations) of the technology, best operational practices and potential means of trouble-shooting. Every usable machine in the history has a human interface that accomplishes these things. When a machinist is operating a laith, they can observe whether the power, gear ratio and cutting tool are making a clean cut. If they want to change the speed of the rotor, it's clear that the most preferable way is to change the gear ratio. If the cut is not clean even under optimal rotational speed, they would know maybe the cutting tool needs to be sharpened. Using a laith requires a somewhat steep learning curve, but at least there is one. On a desktop computer interface, the relative size of the menu bar vaguely indicates the capacity for multitasking. You can easily drag and resize each window to have the best combination of applications running. If the computer becomes slow and laggy, most people can easily induce that they should close some windows to keep everything running smoothly. These are all examples of how a human interface bridges the gap between what the user wants to do and what the technology can do. 
+
+What the chatbot interface assumes is that the user can do all of these by giving more instructions in natural language to correct or optimize the model's performance. If the AI technology we have is good enough in terms of its cognitive capabalities (see Section \ref{cognition}), this is a quite viable assumption. However, our AI is still not there and this chatbot interface only results in prompts augmented with more and longer prompts, which ultimately exceeds the context window of the model and makes it disoriented. Chatbot is an interface for the AI that can do everything (or, one that is very close to reach technology maturity), but it is an extremely ineffective and inefficient way to ``operate'' today's large language models.
+
+{\itshape TODO: Why augmenting chatbot instead of radical new design. Because it's langague model. Because language is the primary way of communication}
+\printbibliography[heading=bibintoc]
+\end{document}
