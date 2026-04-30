@@ -341,7 +341,718 @@ Here I sum up a couple of principles for designing machine-like interfaces for h
 \end{description}
 
 All of these ideas use the interface to push more agency back to the user. They emphasize the fact that AI is fundamentally a tool we use; it performs as optimized by the human operator. And the human user is ultimately accountable for ``using it the wrong way.'' The machine-like interface does not attempt to replicate human emotion or pretend to understand human experiences. It's designed to stay true to what it is, so we can, too.
+
 \section{Designing machine-like AI interfaces}
+
+\subsection[Feb 22]{The Weekly Dispatch of Mechanized AI, Feb 22: Form Study, Plan and the Elevator Pitch}
+
+Good news at the end of the first week: I think I know what the project is, and the people I've talked to so far seem to be on the same page. I think it's worth narrating again what I am trying to do here because I wish to keep adjusting and honing it, and I would really appreciate your thoughts. But first, I want to start with the actual things I've been doing this week.
+
+\subsubsection*{FORM STUDY}
+You might have already seen the concept device that I put together a while ago. I have to confess that it is still more of a demonstration of the functionalities than of the form/shape. Essentially, what I am trying to design is a computer that runs a certain ``flavor'' of AI models. I shall discuss which flavor it is later in detail, but this computer I am designing is supposed to be the physical embodiment of this flavor.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/early_viz.png}
+    \caption{early visualization}
+\end{figure}
+
+This week I went back to low-fidelity mode and just focused on the different shapes. As you might have noticed, all of them are some forms of a assembly of three size-changing units.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/sketches.png}
+    \caption{sketches}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/sketch_models.png}
+    \caption{sketch models}
+\end{figure}
+
+I am not a visual thinker. It's easier for me to let the functionalities inform the shape, so for one of the shape I developed more sketches to illustrate how will it work. Eventually I want to come back on the form and CMF in greater detail, but the ``works-like'' aspect of this project is equally important as the ``looks-like'' aspect, and I think they inform each other. Because of that, I believe it's more imperative now for me come up with a list of the things I want it to do, and I would really appreciate any feedback or ideas.
+
+\subsubsection*{MORE DETAIL ON WHAT IT DOES}
+This computer is actually three ``compute units'' combined together to run your on-device personal AI models. The three units process the embedding, attention, and feed-forward (perceptron) part of the prevalent Transformer model architecture respectively. You can configure the size of each part to tailor the model for different tasks (like the examples here), and each compute unit will activate more cooling vents to reflect the configured size.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/compute_units.png}
+\end{figure}
+
+Interaction still happens mostly through natural language, but you type the prompt on your phone and tap your phone on the device to transmit it, then do so again to receive the response. This way the entire device stays offline.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=0.4\textheight]{images/training_station.png}
+    \caption{training station and data collector}
+\end{figure}
+
+There is an accessory ``training station'', that provides the additional computing power to train or fine-tune the model with custom data that the user brings. For example, you can fine-tune the embedding unit so that the model understands your own unique value. Or, you can bring data the familiarize the model with cultural context.
+
+It's an accessory other than a built-in function because training and inferencing uses very different computers, and the user will also likely train a model much less frequently than running it. I wonder if this accessory can also have some kind of ambient sensing capabilities, so that it becomes a one-stop data collection and fine-tuning device too.
+
+If scaled up a little bit more, maybe these individual fine-tuned compute units become a collection at local libraries that the community maintain and owns.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/library.jpeg}
+    \caption{library of fine-tuned models}
+\end{figure}
+
+Additionally, these units are stackable, so the user can run large models if they are willing to have a much clunkier device.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/stackable.jpeg}
+\end{figure}
+
+Finally, how do I use the affordance of the physical device to represent the affordance of AI? This sketch is simply using graphical patterns to visualize the mathematics behind each part of Transformer, but I also think each compute unit should just look and work very differently to indicate their respective functionalities inside a Transformer model.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/math_viz.jpeg}
+\end{figure}
+
+\subsubsection*{WHAT ARE THE TRUE SOCIETAL IMPLICATIONS OF AI?}
+I frame this device as a ``personal productivity AI machine''. It's roughly the size of an iPad, runs on battery, and is portable. The most direct analogy is probably laptop. You can have it around with you all the time if you want, but you will likely only use it for certain tasks and the frequency of interaction is much lower than your phone. Also, I am focusing on using AI to do productive work, not on the consumption side of things. Maybe think of it as a glorified version of the Mac Mini that people are rushing to buy for their OpenClaw.
+
+What I am not so sure about is, should this be a replacement or an augmentation of PCs? I believe that the true long-term, societal and economical implications of this wave of AI boom is the automation of software-based production process... [The text continues to discuss the reorganization of production and the automation of software engineering].
+
+The question then is, are all these software just going to become some kind of AI agents/model that you can interact with natural language, or are the software still going to be there and we are just coming up with AIs that can operate the software for humans? What I am getting at is, if AI is replacing the softwares, then it makes more sense that my device becomes a replacement for PCs too. But if instead AI agents replaces the just humans, then maybe PC will still exist for the softwares and my device simply becomes an autonomous mouse-keyboard-screen integration.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/autonomous.png}
+    \caption{autonomous mouse-keyboard-screen integration}
+\end{figure}
+
+\subsubsection*{OTHER IDEAS}
+\begin{itemize}
+    \item \textbf{Interpretability:} Searching for means to make the model and device configurable besides size.
+    \item \textbf{Hardware-as-Model:} Exploring responses like FPGA re-programming inside compute units for tighter hardware-model integration.
+    \item \textbf{Version control:} Addressing the iterative nature of generative AI tasks, noting that current chatbot interfaces are poor for this.
+\end{itemize}
+
+\subsubsection*{THE ELEVATOR PITCH}
+What is this project exactly? What is the ``flavor'' of AI I am talking about?
+\begin{displayquote}
+    The body of this work is a Tangible User Interface that represents an alternative AI paradigm based on small models that are private, personal, and configurable...
+\end{displayquote}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/overview.png}
+    \caption{project overview}
+\end{figure}
+
+\subsubsection*{FLAVOR}
+Comparison of ``Foundation Models'' vs. ``Small Models'':
+\begin{enumerate}
+    \item Small vs. Big
+    \item Owned by user vs. Owned by corporate
+    \item Private/Personal
+    \item Configurable vs. One-size-fits-all
+    \item Application-specific vs. Omni-capable
+    \item Modular/Compartmentalized vs. Contaminated/Adapted
+\end{enumerate}
+
+\subsubsection*{PROJECT MANAGEMENT}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/timeline.jpeg}
+    \caption{60\% means that I don't wait until 100\% to enter the next stage}
+\end{figure}
+
+My design skill honestly leans towards the works-like side of things more than the looks-like aspect. I believe the power of this project lies in animating the designed object so spectator can actually picture and imagine the world with this flavor of AI... [The text concludes with a timeline for hitting the ``product definition'' checkpoint in three weeks].
+\clearpage
+
+\subsection[Feb 28]{The Weekly Dispatch of Mechanized AI, Feb 28}
+\subsubsection*{Working towards clearer feature set and form}
+
+Here in New England we just experienced a blizzard with the most snowfall ever, which gave me some nice and quiet time to focus on form-giving and modeling. The work I produced so far might not be the biggest numeric quantity, and I am still working on bringing more permutations to the table, but I do think they can open some interesting conversations already.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_01.jpeg}
+\end{figure}
+
+\subsubsection*{Feature set}
+
+Like I said last week, I am hoping to let the working features guide the initial study of the appearance, so here I present a short list of the feature set of the device. What I realized is that some of them might not bear substantial implications towards form-giving, as they are very likely just software features. So in this list I tried to identify the ones that can inform the form study the most, which are highlighted in \textbf{bold}.
+
+After all, AI is a piece of software and this realization has led me to rethink the framing around this project, mainly, if I want to keep calling it a tangible user interface project or not. I shall discuss it more later but let's focus on the form study first.
+
+\subsubsection*{Compute unit}
+
+\begin{itemize}
+    \item \textbf{form-morphing units} to activate more computing power as requested
+    \item \textbf{swappable,} expandable
+    \item offline, intentional transmission
+    \item \textbf{three discrete units}: embedding, attention, and perceptron
+    \item runs on battery with independent, swappable battery unit showing power level as output tokens left
+\end{itemize}
+
+\subsubsection*{Training station}
+
+\begin{itemize}
+    \item fine-tuning with custom data
+    \item adjusting fine-tuning vs foundation model balance
+    \item knowledge-purging via sparse transcoder model (This is inspired by the interpretability researches I was reading.)
+\end{itemize}
+
+\subsubsection*{Other accessories}
+
+\begin{itemize}
+    \item wrist strap?
+    \item carrying case for extra compute units?
+\end{itemize}
+
+\subsubsection*{App}
+
+\begin{itemize}
+    \item handle all input from the user
+    \item iterative version control
+    \item data collection, categorization and labeling
+\end{itemize}
+
+\subsubsection*{Sketch models}
+
+This is just a quick overview of the models I made, any comment and feedback are welcome and much appreciated.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_02.jpeg}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_03.png}
+\end{figure}
+
+This is the first sketch model I made. It was inspired by the shape of heat sink and I thought it would be interesting to explore the relationship between this sliding motion and the appearance of the linear groves. The idea is that as one unit slide its relative position to the adjacent unit, more cooling vents on the side can be revealed.
+
+The linear groves unfortunately give a very ``rigid'' vibe, which I don't exactly like. But I like the simplicity of the motion and the retro feel of the fillet on the other edges.
+
+The next one here is not exactly three units but four, with the fourth being the battery module that ``holds'' the three compute unit together.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_04.png}
+\end{figure}
+
+When bigger size is configured for one of the units, the extra cooling vents pops out like this:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_05.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_06.png}
+\end{figure}
+
+And you can optionally use a big unit that is permanently high-power.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_07.jpeg}
+\end{figure}
+
+Initially I thought if it's always an assembly of three independent compute units, starting with some sort of a triangular shape would be straightforward. This one also has the central battery module. It expands similarly as the last one:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_08.jpeg}
+\end{figure}
+
+Another attempt at making a triangular four-module assembly, with a different way of expansion:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_09.png}
+\end{figure}
+
+I realized that it is very difficult to make something triangular that does not look like a spaceship or a cult symbol, so I tried to simplify it a bit:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_10.jpeg}
+\end{figure}
+
+Another simpler form, but with the sliding motion from previous ones:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_11.jpeg}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_12.png}
+\end{figure}
+
+A couple reflections:
+
+\begin{itemize}
+    \item I think it's very important that the three- or four-module assembly doesn't look overly integrated and ``seamless'', because the idea of modularity is central to this project.
+    \item The battery module actually bears implications for the energy usage and sort of tells to user they have to conserve power, and I do like this idea. If on the battery module it shows the battery level as output token left, it then can work with the size configuration as a pretty clear and literal feedback mechanism for the user the optimize their AI usage.
+    \item These are pretty rough models and the proportions aren't exactly what I want, but as a prototype for how things should be assembled I think they give me enough information. As I keep working on these I also want to explore other accessories that help tell the story. For example, if the swappable, compartmentalized unit are used for different tasks, the user might want to carry an extra couple of them around, so maybe there is a multi-unit carrying case.
+    \item These studies focus on the 3 (+1) compute unit assembly, but there is also the training station that I need to work on.
+    \item The next step might be starting to give more details, like the position of the connectors, the NFC area, the charging port, small E-Ink display, etc.
+\end{itemize}
+
+\subsubsection*{Naming and narrative}
+
+When I look at the feature set, I started to feel like it might be a bit limiting to call the outcome of this project ``tangible user interface'', as the term usually only refers to user interfaces based on the manipulation of physical materials. I am coming to terms with the fact that a lot of the ideas of this alternative small model paradigm might be better manifested with digital/software interfaces. So I think the outcome of this project should probably be described as \textit{the embodiment and demonstration of an alternative paradigm for AI that is based on small models which are private, personal, and compartmentalized and configurable}.
+
+Initially I was calling this project \textbf{Objectified AI} to focus the idea of embodiment. However I felt it doesn't really encapsulate the various ideas behind the project fully. Right now I am calling it \textbf{Mechanized AI}, which I thought in addition to the idea of embodiment also captures the idea of configurability, but I am also aware that it felt a bit too ``rigid'' and monstrous. I am hoping to come up with a better name that also expresses the intimate, personal nature I intend to show. One of my professor suggested looking into the idea of \textbf{ghost in the machine,} which I thought is really interesting. I am thinking about what would be the implications of words like specter, deamon or soul?
+
+\subsubsection*{Visual language}
+
+Aside from the form study, another aspect of the ``embodiment'' I've been exploring is the visual language of the project. I am trying to come up with a set of visual elements that can be applied across the board, including the physical form, CMF, graphics for the app and even the communication assets.
+
+The first approach I am exploring is the use of softgoods in electronics. It brings out the human aspect that aligns with the goal of making AI personal and private.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_13.png}
+\end{figure}
+
+Another approach is the use of transparency to counter the image of AI being a black box. I am designing an AI system that is modular and configurable, it shouldn't feel ``magical'' and ``seamless''. I want it to give subtle visual cues to tell the user what it's made of and what is going on.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_14.png}
+\end{figure}
+
+In this moodboard, images on the left side are the ones that feel a bit overly ``techy'' for me. They scream loudly their technical nature and I don't really consider them good examples. What I am aiming at is a more obscured way to reveal what's inside. I thought the sneaker on the upper right corner is a good example.
+
+Also, here is a list of visual strategies that I should try to avoid.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_15.png}
+\end{figure}
+
+The image on the lower-right is actually a project done by Map Project, a London-based studio that I really like. The project is designing the enclosure of an IBM AI server. They literally describe the project as defining the visual language of AI. I brought this up because it is a very good project to communicate the big model AI paradigm: definitive, rigid, authority and powerful. I thought it communicates these ideas very well, and is the exact opposite of what I am trying to achieve.
+
+Finally, I summed up some rudimentary description of the visual language for my project
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_16.png}
+\end{figure}
+
+These are just my first attempt and I would really appreciate your comment and feedback. There is still a long way to go for finding the right visual language as it will also inform the UI or even motion design in addition to the CMF of the physical objects.
+
+---
+
+As I talk to people about my project and gather different perspectives, more and more aspects of the project starts to emerge, which I found to be very productive. A lot of them are things that I didn't consider initially, which also means that I have more to do now.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/c1b_17.png}
+\end{figure}
+
+This is a list of the things I need to do in the coming weeks, in the form of a timeline. It might grow quite a bit as people opening more worlds to me, but anyways I thought presenting a more detailed plan can help me gauge if I am on the right track.
+
+That's it for this week. I will see you next week!
+\clearpage
+
+\subsection[Mar 8]{The Weekly Dispatch of Mechanized AI, Mar 8}
+\subsubsection*{initial definition of the form}
+
+Building on the form explorations I did last week, it seems like the three sliding blocks with grooves is the one that most people connects with. So this week I've been focusing on different permutations of the form and more detailed design.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_01.png}
+\end{figure}
+
+I started with different arrangements of the grooves, but ultimately they are all kinda similar and people reacted similarly that this object gives them the feeling of retro tech, like Mac from the 80s, or old speakers. I should clarify that the color shown here is just a generic plastic and I intend to revisit the CMF later down the road.
+
+I've been talking about the use of fabric materials as surface finishes, here are some explorations. I am not an expert in renderings so visually they are not very accurate.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_02.png}
+    \caption{this is supposed to be leather}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_03.png}
+    \caption{a finer woven fabric}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_04.png}
+    \caption{more course fabric mesh, commonly used in speaker}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_05.png}
+    \caption{alcantara/suede}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_06.png}
+    \caption{translucent nylon ripstop}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_07.png}
+    \caption{also translucent nylon}
+\end{figure}
+
+I understand that there are still a lot of work to do in this area, but as I talk to people it seems that there are strong curiosity about the functionalities, features, and human interactions of the device. At this stage I think the form is perhaps convincing enough, what it needs is illustration of how you would use it. Of course, that interactive aspect will influence further development of the form later.
+
+So I tentatively picked one of the permutations of this form and added more functional details to it, but the plan is to set the work of form study aside for now and focus on prototyping the interactions next week.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/ad2_08.png}
+\end{figure}
+
+Some details:
+\begin{itemize}
+    \item the embedding module is slightly smaller, as it is something that needs to be swapped frequently and also requires the least computation.
+    \item the embedding module and perceptron module both have a small e-ink display as they can be fine-tuned and labeled by the user.
+    \item the strip LED light both communicates the battery level and status of the device
+    \item the flat surface in the attention module is where NFC communication happens
+    \item the battery is also installed in the attention module.
+\end{itemize}
+
+\subsubsection*{Towards prototyping interactions}
+
+One of the conclusions I drew from several conversations is that some form of ``user testing'' could lead to interesting discoveries at the stage. The first step for me then is to try to come up with some kind of ``working prototype'' that allows the conversation about how to use it, how it can be used, and most importantly, how it will impact people/society.
+
+I made a couple videos last semester for the same reason, one of them looks like this:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{abacus.jpg}
+    \caption{the abacus}
+\end{figure}
+
+Essentially this is just using some editing to simulate or ``block out'' the steps of interactions and the response from the device. So making some videos like this is my primary task for the coming week I think.
+
+Mapping out the interaction flow for the videos will inevitably involve the software aspect. Since the visual language is still an ongoing effort, I think it makes sense to keep the fidelity of the software prototype low, here are some rudimentary images:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=0.4\textheight]{images/ad2_09.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=0.4\textheight]{images/ad2_10.png}
+\end{figure}
+
+So that's a short repost of this past week. I will see you next week with some videos. As always, feedback and comment are welcomed and appreciated.
+\clearpage
+
+\subsection[Mar 15]{The Weekly Dispatch of Mechanized AI, Mar. 15}
+
+As I am designing something that is not immediately clear what it does and how to use it, I've been kind of struggling with communicating what it is. It's not unusual that I have to spent maybe ten minutes talking non-stop just to explain the core functionalities and ideas behind them. As a result, since the core concept and definition of the product is clearer now, I made some very short animations just to demonstrate the basic interactions and features. Please let me know if you are still confused after watching these animations, that would help me a lot.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{groove_adjust.jpg}
+    \caption{Adjusting the relative size of the components of a model}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{groove_swap.jpg}
+    \caption{Swapping different modules}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{groove_tap.jpg}
+    \caption{secure data transmission}
+\end{figure}
+
+These are just very short snippets to communicate what it is, but they don't really bear significant implications towards how this product will change people's lives or impact societal human-AI relationship.
+
+So, while I was going through the more detailed UX design for these snippets, I also compiled a ``matrix'' to help me brainstorm what kind of scenarios provoke the most interesting implications of this alternative AI paradigm.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/7d1_01.png}
+\end{figure}
+
+I apologize if the texts are a bit small. I started from the left, where I listed all kinds of different attributes that make distinct contrast between the prevailing big AI paradigm and my alternative. I picked the comparisons that can be represented by the core features of my device and added a second column to them, where the specific features are listed. On the next column I listed the reasons why each comparison invalidates the application of big models in certain scenarios, and then the next column is the scenarios in which I can demonstrate my alternative paradigm.
+
+It is indeed a long list, but I really hope to collect as many ``interesting use cases'' as possible to demonstrate how this alternative paradigm is different and also how it will influence the way people live beyond just begin a new tool. So, I'd really appreciate any ideas on the use cases.
+
+I picked a couple ideas from the list and developed them into more detailed ``scripts'', outlining the exact situation and how my device is involved. Basically thinking about how it came become a prop in a movie. Here are the short writings. Once again I will really like to know which ones are the most convincing and interesting to you. (Or, if all of them feel distant to you)
+
+\subsubsection*{Scenario Scripts}
+
+\subsubsection*{Instant Destruction}
+Say, a defense industry executive is attending a closed-door meeting with DoD officials discussing some highly classified project. The are using some form of an AI tool to take notes from the meeting and also to quickly browse through piles of dossiers so they can answer questions backed with data.
+
+After the meeting, they destroy the physical device on-site to make sure no classified information leaves the room. No digital traces of any kind are left.
+
+\subsubsection*{illustrative for}
+secure, offline, private
+
+\subsubsection*{Train Traffic Control}
+Update outdated and unreliable train signal systems to an intelligent traffic management system that can response to weather and dynamic ridership conditions. It not only monitors the overall system ridership but also predicts and adjust capacity allocation.
+
+The AI can be tweaked iteratively to perform efficiently for this specific context, optimizing the model size and training data to minimize hallucination and output delay time, making it much more preferable than cloud-based systems. Once optimization is achieved it can be deployed across the transit network to control each signal, ensuring consistent performance while allowing customization at different locations in the rail network. A distributed system also offers extra redundancy and security than a centralized system, immune to infrastructure failure and cyber attack.
+
+\subsubsection*{illustrative for}
+configurability, application-specific, efficient, offline (infrastructure-independent)
+
+\subsubsection*{Library}
+Local communities can use their data to train models so that models understands the cultural background of the communities. It becomes useful for models to engage with cultural materials, to behave according to community guidelines and to preserve important knowledge.
+
+Compare to could-based foundation models, these small models can be fine-tuned and steered much more easily. The data stays owned and controlled by the community, without being significantly diluted by foundational datasets. They can also retains a repository of models/modules specific to different aspect or realm of their culture, say one for textiles, one for graphical patterns and one for music, essentially becoming a library of models.
+
+\subsubsection*{illustrative for}
+customization, user-owned, personal
+
+\subsubsection*{Woodworking}
+Experienced woodworkers practices making as an art, they have their own unique techniques, approaches and logics to making. They prefer a certain set of tools, and use them in a highly individualized way.
+
+They can now use the AI device to record how their personal processes and train the model to understand their unique preference for woodworking. The AI becomes a truly personal collaboration and brainstorming tool instead of just reporting generic summarization of instruction manual from the internet. Users can also easily share their special techniques from years of experiences to other people just by share the model. By giving the model their personal training data, they also don't have to worry about the model responding with untrustworthy data source.
+
+\subsubsection*{illustrative for}
+personal, application-specific, customization
+
+\subsubsection*{Harsh Environment Monitoring}
+The modular nature offers additional redundancy for use in harsh environment or mission-critical tasks. For tasks like autonomously monitoring and analyzing data in extreme nature environment, if something breaks down, it's easy to trouble-shoot the root of the failure and hardware can be quickly swapped to one that is already pre-configured for the specific task.
+
+If the problem is instead a software issue, it's also easy to isolate the bug by swapping in a new module to test if the rest still works.
+
+\subsubsection*{illustrative for}
+modularity
+
+\subsubsection*{Writing Legal Documents}
+Law firms can train and keep a repository of models/modules for each case. Training data and model sizes can be configured to suit the needs of each case. Data stays fully local and private so there is no risk to attorney-client privilege.
+
+The non-conversational interface prioritizes focus on work and minimizes distractions. Generated outputs are iteratively adjusted and applied to the specified regions, preventing hallucinations and errors. No changes are made unnoticed.
+
+\subsubsection*{illustrative for}
+intentional, productivity-focused, private and user-owned
+
+\subsubsection*{Parenting at Work}
+You are at work and the school of your 10-year-old daughter called because the school nurse found out that she needs to go to the dentist asap. You need to figure out whether you can book an appointment with your dentist or otherwise your daughter might have to go to the ER. You can quickly swap the embedding module you are using at work to the one that you've been using for parenting, which also knows personal information about your daughter. The model can now help with the reservation or even find some back-up options that suit your daughter's need. Once it reports clearer path forward, you can switch back to the work module.
+
+\subsubsection*{illustrative}
+modular, customizable, user-owned
+
+\subsubsection*{User testing}
+
+My main task this week would be to build visuals or models that can communicate the scenarios. Following that, I am thinking about some kind of user testing or user study to uncover more possibilities. There are two kind of possibilities I wish to explore. First, the possibilities of what else can this device do? And how can it do it? This might take the form of me giving people my device without explaining how to use it, and then asking them questions or observing them trying to figure it out.
+
+The second kind of possibilities will be discovering new scenarios, for which the user study might look more like giving people the device along with the instructions and then have them ``live with it'' for some time. For both of them, I am going to need to work on detailed plan for the study, what to ask and how to ask them.
+
+I will admit I've never done any structured user research before, so this might be the area I will be seeking help for the coming weeks, besides working on the first version of working prototype implementation.
+\clearpage
+
+\subsection[Apr 5]{The Weekly Dispatch of Machanized AI, Apr 5}
+
+Following my writing last week about why the conversational interface for AI is confusing, inefficient and misleading, I've developed a couple small sketch models to illustrate the ``machine-like'' interactions I am proposing. These small interfaces follow the three design principles I outlined: frictional, attention-seeking, and informative. Each of them addresses a certain illusion, misconception or issue of anthropomorphism in human-LLM interaction. Collectively their goal is to increase human deliberation, push agency back to the user, and unpack the black box of AI.
+
+Interaction is dynamic, time-based and sequential. With the static sketch models it's a little bit hard to explain the interactions very well, but I tried to make them as clear as possible with some video clips.
+
+These individual interfaces are independent from each other, they each represents different problems of anthropomorphism in AI. Some of them seem to be ``working together'', but I shall emphasize that conceptually they are separate, even thought I physically assembled them on one device.
+
+\subsubsection*{MAILBOX}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{mailbox_sketch.jpg}
+    % \caption{to be replaced}
+\end{figure}
+
+The is about deliberation. User now have to write their prompts on a piece of paper and insert it. The action of writing encourages them to be intentional and detail-oriented, also because the mailbox indicates that you will have to wait for a response. Chatbot interface encourages user to give up their deliberation and just intuitively submit an unstructured sentence as the prompt. Using the metaphor of submitting to a mailbox, I intend for this to increase deliberation from the human operator and disrupt the conversational paradigm.
+
+An additional reinforcement to this idea is that the content of this piece of paper can be a structured form, almost like the tax return form, where the user is forced to formulate their prompt in a structured and logical way.
+
+Chatbot interface discourages the user to write detailed instructions, but in reality models usually produce better outcome when very specific instructions are given. Writing, however, makes sure that detailed specifics are given.
+
+The idea of conversation and writing are very different to me. Conversation is fully intuitive, while writing is deliberate. Conversation feels inherently human because it also relies on eye contact, facial expression, tone, pace and body language to transmit information. Writing, on the other hand, is a communication medium that relies purely on language. Writing is uni-directional and asynchronous, whereas conversation is always mutual. Writing is almost always more formal and rigid than conversation. That's why I think replacing conversation with writing is one of the valid methods to disrupt anthropomorphism.
+
+\subsubsection*{SCROLL WHEEL}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{scroll_sketch.jpg}
+    % \caption{to be replaced}
+\end{figure}
+
+Imagine that when the model is processing, there is a physical dial constantly spinning to show that it's in the ``working state''. It is also seeking attention and monitoring from the human user. The user can monitor the live output and hover over the wheel to slow it down. If they spot something that is not going down the intended way, they can tap the wheel to stop it, and scroll the wheel to rewind to a place and give additional instructions to have the model re-start the processing from a certain point.
+
+This interface emphasize human examination and criticality. It is urging the human user to not trust the LLM. It provides incentives for the user to constantly monitor the system and be ready to jump in to intervene. It discourages the user to submit a task and just ``forget about it''.
+
+The iterative human feedback cycle is also not discrete anymore. You don't have to wait until the model finishes doing the entire task before you can catch an error and ask for another iteration with modification. The scrollwheel gives the user an interface to catch an error and fix it in ``real-time''.
+
+\subsubsection*{LAYERS AND DIMENSION}
+
+Using the visual metaphor of sliding and lengthening the ``pipeline'', this is used to adjust the number of perceptron layers (MLP).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{sliding_sketch.jpg}
+    % \caption{to be replaced}
+\end{figure}
+
+This one is borrowing the mechanism of a clamp to adjust the dimension of the model, or the embedding dimension. The fundamental idea of word embedding is essentially compression, so I thought maybe a clamp is straightforward.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{clamp_sketch.jpg}
+    % \caption{to be replaced}
+\end{figure}
+
+These two settings for the size of the model are about resource management. Talking to a computer doesn't give us a chance to understand how much computing power is needed for a task, because the cognitive load for a human to complete the same task might be very different from the computational load of a language model. Hidden behind the seemingly intuitive conversational interface, the humongous resources being consumed by LLMs are intentionally invisible to the user. More means for human to adjust the internal configurations of a model also gives more agency back to the user for them to figure out how they want a model to work. These two visual metaphors are also attempts to unpack the blackbox of AI and give people an opportunity to understand the internal structure LLM.
+
+The current chatbot interfaces only offer discrete choices for different models, without being transparent on their exact differences. It is impossible for the user to understand which model is the best choice to deal with different tasks. By giving them actual granular configurations, they can budget their usages to suit their needs.
+
+\subsubsection*{CONTEXT DISK}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{context_disk.jpg}
+    % \caption{to be replaced}
+    \end{figure}
+
+This is about agency. LLM is a tool, it should follow exactly the instructions provided by the user, just like this disc with indentations that control the movement of the probe. This disc is a token ``crafted'' by the user to ensure that very specific information for the model to follow are provided and executed.
+
+The information encoded on this disk is the context. Context is a set of well-defined and fixed environmental parameters. People tend to expect the model to understand the context, just like when we are talking to a human. But in a conversational interface for language models, every detail of the context needs to be spelled out, and switching between context is exhausting because there is no clear boundaries of contexts. With this disk representing defined environmental parameters of the context, it is now easier to switch contexts. Once again, human agency and deliberation is emphasized.
+
+\subsubsection*{SLOT MACHINE}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{slot_sketch.jpg}
+    \caption{the slot machine}
+\end{figure}
+
+This is once again about cognitive surrender. The conversational interface along with the authoritative language that LLM uses encourages users to turn off their own cognition and just trust AI. We have to tendency to believe people, and when AI mimics human we forget that it is fundamentally stochastic and we need to verify its output. So, I am using the visual metaphor of a slot machine here to illustrate that the outputs are merely a statistical prediction.
+
+At certain important juncture of a prediction sequence, for example, when the model predicts that it should end this conversation, the three most likely predicted tokens are displayed on the slot machine and the user has to choose one. Normally, the model will just spits out the one most likely token. By involving human in the low-level decision-making process of a LLM, the user is encouraged to activate their own deliberation and be critical on the output of AI.
+\clearpage
+
+\subsection[Apr 24]{The weekly dispatch of Mechanized AI, Apr 24}
+
+Sorry about the silence for the past couple weeks. As the project shifts to a (hopefully) clearer and most focused trajectory, I've been trying to grapple with building a more robust narrative while start building the physical object for the thesis exhibition. I feel like I am now at a better place where I am certain and confident about what the project aspire to address and what are the inherent shortcomings that I have to acknowledge, and I think it's finally a good time to keep you updated on the latest updates.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_01.png}
+\end{figure}
+
+\subsubsection*{Interaction design experiments}
+
+First and foremost, I want to be very clear that this is an experimental research project on the interaction design of LLM. This project seeks to propose radically novel interaction design paradigms that I'd argue is the very opposite of the prevailing conception of human-LLM interactions.
+
+Practically, there are very good reasons why these proposals were never considered for real product implementations. But this is the kind of exploratory work that has to be done before there is even a clear definition of the technology, the product, and the use cases. None of this work is supposed to be materialized as ``user interfaces'' in the near term, but they indicate new ways to think about how the technology and its interface should be designed in the future.
+
+I want to quote the famous term by Marshall McLuhan, \textit{“the medium is the message.”} In the lens of interaction design, one can argue that this translates to \textit{“the interface is the technology”}, highlighting the inseparable relationship between the technology itself and the user interface. Interaction design reflects what we design and imagine the technology to be and how we wish to use it. By proposing new ways to think about interaction design for LLM, this work also points to new ways AI can be built and imagined. At this front, this is also a speculative design project, because the interfaces I designed are based on the kind of interpretation of AI that does not exist yet. They are not designed to be realized in the current world, but as seeds for the far future.
+
+All this is to say that, some of the designs in this project doesn't really solve a problem but asks a question that very few people are asking. They are more about making a statement, and I am okay with that. That said, I do think some of them might have more practical implications for user experiences. But with the limited time and scope I can deal with, the trade-off I have to make is to prioritize ``making a point'' rather than creating a better user experience. Nevertheless, I am happy about this.
+
+***
+
+What you are looking at in the first image can be roughly imagined as a ``control panel for the LLM machine.'' Following my article a couple weeks ago, I am designing machine-like interactions for LLMs. Instead of designing user interface around the imagination of AI as human being, through this work, I wish to argue that AI should be seen as a tool, and a machine-like one.
+
+These interactions pushes the agency back to the human and make evident that it's the human operator who is making decisions and taking responsibilities. They also urge the human to be intentional and deliberate, while unpacking the blackbox of AI.
+
+\subsubsection*{Mailbox}
+
+On the far left side of this fixture is the mailbox that replaces the text box as the interface to submit your prompt to a LLM. In a conversational interface like chatbot, people tend to rely on their \textbf{intuition} and use informal language that doesn't really incorporate enough detail and instructions. With the mail box, I am urging people to be \textbf{deliberate} and to slow down. LLM is a tool that is supposed to be operated with precise specification and instructional details, not someone you can just talk to to get something done.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_02.png}
+\end{figure}
+
+To delegate a task to this AI machine, you first have to fill out this prompt sheet, which forces you to follow a structured format to describe your work in precise detail. This is partly inspired by the lack of templates in the chatbot interface, which bothers lots of people who use LLM agents frequently.
+
+Once you fill out the prompt sheet, you submit it to the machine through the mail slot. This metaphor of the mailbox also indicates that you will have to wait for a response, and if you need to re-do something there is a tangible cost of sending mails back-and-forth, which further encourages the intentionality of this interaction.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_03.png}
+\end{figure}
+
+LLMs have a limit of context window, which means that you can not just keep adding instructions to your input prompt because if the length of your input exceeds the context window, the model can not process all the information at once anymore. This is shown by the physical space limitation of the mailbox. If the box is full, you have to open it to sort through all the mails and pick the ones that is actually important and get rid of the lesser-important ones, where the colored offset tabs of the prompt sheet help.
+
+This again encourages the user to be very deliberate on their instructions submitted to the model because now they have to make sure they are not wasting the context window by giving unnecessary information. Every token counts.
+
+When the mail is full, the machine flashes like this:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{flashes.jpg}
+    \caption{flashing when the mailbox is full}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_04.png}
+    \caption{You can also peek into the mailbox through the transparent side wall to know its remaining capacity}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_05.png}
+    \caption{opening the mailbox to sort out excess “letters”}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/4a4_06.png}
+    \caption{prompt sheets with colored tabs to help you refine the instructions}
+\end{figure}
+
+\subsubsection*{Clamping the embedding dimension}
+
+On the topic of token counts, chatbots provide no ways to optimize your LLM usage that is directly connected to the internal mechanics of models. Using AI is getting expensive and is certainly not going to be free, but talking to a model gives us no idea of the computation load of the task. We need to know what are the internal parameters that we can change to manage resource consumption. So, I present a clamp here that is a direct metaphor of adjusting the embedding dimension of the model, which is one of the most important parameters that influences the performance and resource consumption of a Transformer model. It looks like a compression mechanism, which also directly relates to how the step of “embedding” works in a language model.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{clamp.jpg}
+    \caption{the clamp}
+\end{figure}
+
+By adding this control to human-LLM interaction, the human operator now has one more decision to make when using LLM, which speaks to again the idea of more human control and agency. As a tangible metaphor, it also informs the user a certain aspect of the internal mechanisms of LLMs.
+
+\subsubsection*{Scroll wheel}
+
+The last interface today is the scroll wheel. It is not yet mounted on the machine and I am still adjusting the looks of it, but the interaction can be shown in this following video.
+
+When the model is generating output, the wheel keeps rotating. This is to call for attention from the human operator and to indicate that the user should monitor what the model is doing and be ready to jump in and fix something instead of just submit a prompt and forget about it. We are not supposed to trust AI like we trust a human, instead, we should trust it as a tool. This attention-seeking movement indicates that it's ultimately the human that bears responsibilities if something fails, because monitoring a tool has always been the responsibility of the human operator.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{scrollwheel.jpg}
+    \caption{the scroll wheel}
+\end{figure}
+
+More incentive is provided for monitoring. If you spot something that is not going the way you wanted, you can stop the wheel spinning, which also stops the model generating output, and then “rewind” to a certain place to have to model start from there again with new instructions. This is very different to how chatbot interface organizes conversation as discrete chunks and requires every new modification to be generated from the beginning again.
+
+The playback control scroll wheel emphasizes the issue of trust we are having with AI, in particular the issue that we are trusting it too much in the wrong way. It makes clear that AI is a machine that demands monitoring from the human operator, not a cognitive entity that we fully trust.
+
+***
+
+All of the above interactions use machine-like interfaces to paint a picture of AI that is not anthropomorphic. Challenging anthropomorphism is the main goal of this project. Anthropomorphism creates the wrong illusion of the technology, diminishes human agency and deliberation, and pushes AI to inappropriate use cases.
+
+My design strategy for this project is to use machine-like impressions to propose new ways of thinking about AI. The proposed interactions are frictional, attention-seeking, and informative. They aspire to make AI less intuitive, less trustworthy, and less impenetrable. I should clarify that my intention is not to make AI untrustworthy and unintuitive. My goal here is simply to use these attributes inspired by machineries to create very different imaginations of AI. By making AI less human we make ourselves more human.
+\clearpage
 
 \section{Disciplinary relevance}
 \begin{description}
